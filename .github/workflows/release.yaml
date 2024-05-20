@@ -35,7 +35,7 @@ jobs:
         run: dotnet --info
 
       - name: Build
-        run: dotnet build -c release
+        run: dotnet build -c release /p:ContinuousIntegrationBuild=true
 
       - name: Create release
         if: ${{ github.ref == 'refs/heads/main' }}

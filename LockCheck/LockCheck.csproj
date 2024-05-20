@@ -26,6 +26,10 @@
     <NoWarn>$(NoWarn);CA1031;CA1303;CA1801;CA1716;NU5105;CA1416</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net472'">
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Security.Principal.Windows" Version="4.7.0" />
